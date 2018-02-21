@@ -8,4 +8,9 @@ SELECT * FROM individual WHERE ID IN (1,3,5,7,19);
 SELECT * FROM band;
 SELECT * FROM band WHERE genre = 'Alternative' and isTogether='0';
 SELECT ID, name FROM band WHERE ID ='4';
-
+SELECT * FROM band WHERE name LIKE 'The%';
+SELECT * FROM band WHERE name LIKE '%Stones';
+SELECT * FROM individual WHERE firstName LIKE '__ck';
+SELECT * FROM band WHERE name LIKE '% and %';
+SELECT * FROM individual WHERE firstName LIKE '_im';
+SELECT * FROM band WHERE name LIKE '%s';
