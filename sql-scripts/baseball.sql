@@ -365,3 +365,12 @@ FROM baseball.roster R
 INNER JOIN baseball.team T ON R.teamID = T.ID
 INNER JOIN baseball.player P on R.playerID = P.ID
 ;
+Select * from player;
+Select * from team;
+Select * from batting;
+Select * from roster;
+SELECT b.battingAvg, p.firstName, p.lastName FROM batting b INNER JOIN player p ON p.ID = b.playerID WHERE b.battingAvg ='331';
+SELECT * FROM roster r INNER JOIN player p ON p.ID = r.playerID INNER JOIN team t ON r.teamID = t.ID WHERE t.teamName = 'Boston Red Sox';
+SELECT * FROM vteamRoster;
+DESCRIBE vteamRoster;
+SHOW CREATE VIEW vteamRoster;
