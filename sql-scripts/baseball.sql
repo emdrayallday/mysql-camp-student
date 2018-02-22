@@ -374,3 +374,7 @@ SELECT * FROM roster r INNER JOIN player p ON p.ID = r.playerID INNER JOIN team 
 SELECT * FROM vteamRoster;
 DESCRIBE vteamRoster;
 SHOW CREATE VIEW vteamRoster;
+SELECT p.lastName, p.firstName, b.battingAvg FROM player p LEFT JOIN batting b ON p.ID = b.playerID;
+SELECT * FROM team t LEFT JOIN roster r ON t.ID = r.teamID;
+SELECT * FROM team t LEFT JOIN roster r ON t.ID = r.teamID WHERE r.teamID IS NOT NULL;
+SELECT * FROM team t LEFT JOIN roster r ON t.ID = r.teamID WHERE r.teamID IS  NULL;
